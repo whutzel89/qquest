@@ -2,7 +2,7 @@
 This is a general repo for the 2025 IQuHack-athon at MIT
 
 # Table of Contents
-- [Language and libarary from previous years]()
+- [Language and libarary from previous years](https://github.com/whutzel89/qquest/blob/main/README.md#libararies-and-language)
 - [Topiics from Previous years]()
 - [Resources]()
 
