@@ -11,6 +11,7 @@ This is a general repo for the 2025 IQuHack-athon at MIT
 IQuHACK is a python specific conference as such we will be using the most recent version of python, 3.13.0. The most common QC libraries used in previous years challenges are [Qiskit](https://www.ibm.com/quantum/qiskit), [Q#](https://learn.microsoft.com/en-us/azure/quantum/qsharp-overview), and [cirq](https://quantumai.google/cirq). We have a small list of **TBD** items:
 - OS
 - IDE
+- python Libraries (for venv)
 - Git Basics?
 
 # Topics from Previous Years
