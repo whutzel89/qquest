@@ -21,4 +21,3 @@ Listed below are links to a few resources pointed to on The IQuhack website and 
 - Model Quantum systems to be run on QC
 - Encryption breaking
 - Optimization of linear optics gates
-- 
