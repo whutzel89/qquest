@@ -1,0 +1,2 @@
+# File for keeping track of version number.
+__version__ = 1.0.0
