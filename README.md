@@ -34,6 +34,4 @@ Listed below are links to a few resources pointed to on The IQuhack website and 
 - [List of past Questions from IQuHack](https://github.com/iquhack)
 - [STIM](https://github.com/quantumlib/Stim)
     - [Stim Paper](https://quantum-journal.org/papers/q-2021-07-06-497/)
-
- 
-
+- [Cirq IONQ](https://docs.ionq.com/sdks/cirq/index)
