@@ -17,6 +17,7 @@ pushd $PARENT_DIR
 python -m venv .venv
 source .venv/bin/activate
 pip install -r requirements.txt
+pip install -r requirements_dev.txt
 deactivate
 
 # Return to folder that this script was called from.
