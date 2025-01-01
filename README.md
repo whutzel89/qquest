@@ -35,3 +35,8 @@ Listed below are links to a few resources pointed to on The IQuhack website and 
 - [STIM](https://github.com/quantumlib/Stim)
     - [Stim Paper](https://quantum-journal.org/papers/q-2021-07-06-497/)
 - [Cirq IONQ](https://docs.ionq.com/sdks/cirq/index)
+- Git Prompt Setup
+    - [Git Prompt File](https://github.com/git/git/blob/master/contrib/completion/git-prompt.sh)
+    - [Don't Reinvent The Wheel](https://web.archive.org/web/20160704140739/http://ithaca.arpinum.org/2013/01/02/git-prompt.html)
+    - [Git Status options](https://mjswensen.com/blog/git-status-prompt-options/)
+    - [Stack Overflow](https://stackoverflow.com/a/24716445)
