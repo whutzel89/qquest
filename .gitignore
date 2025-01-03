@@ -8,6 +8,7 @@ __pycache__/
 
 # Distribution / packaging
 .Python
+bin/
 build/
 develop-eggs/
 dist/
@@ -22,6 +23,7 @@ var/
 wheels/
 share/python-wheels/
 *.egg-info/
+lib64
 .installed.cfg
 *.egg
 MANIFEST
@@ -47,6 +49,10 @@ venv/
 ENV/
 env.bak/
 venv.bak/
+pyvenv.cfg
 
 # Mac System Files
 .DS_Store
+
+#Scripts
+create_virtual_env.sh
