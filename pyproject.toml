@@ -6,7 +6,7 @@ authors = ["josh fernandes <joshfernandes@mac.com>"]
 readme = "README.md"
 
 [tool.poetry.dependencies]
-python = "^3.11"
+python = "~3.11"
 cirq = "^1.4"
 idna = "^3.10"
 jupyter = "^1.1"

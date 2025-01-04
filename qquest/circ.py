@@ -1,5 +1,6 @@
 import cirq
 
+
 def main():
     circuit = cirq.Circuit()
     # qubits = cirq.LineQubit.range(3)
@@ -13,10 +14,10 @@ def main():
     circuit.append(cirq.H(a))
     circuit.append(cirq.H(b))
     circuit.append(cirq.H(c))
-    circuit.append(cirq.CNOT(b,c))
+    circuit.append(cirq.CNOT(b, c))
     circuit.append(cirq.X(a))
-    circuit.append(cirq.CZ(b,a))
-    circuit.append(cirq.CNOT(c,b))
+    circuit.append(cirq.CZ(b, a))
+    circuit.append(cirq.CNOT(c, b))
     print(circuit)
 
 
