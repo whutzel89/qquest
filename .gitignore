@@ -40,6 +40,8 @@ coverage.xml
 htmlcov
 junit
 
+# Notebooks
+.ipynb_checkpoints
 
 # Environments
 .env
