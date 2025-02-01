@@ -58,3 +58,4 @@ pyvenv.cfg
 
 #Scripts
 create_virtual_env.sh
+register.py

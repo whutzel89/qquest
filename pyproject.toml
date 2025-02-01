@@ -30,6 +30,7 @@ six = "^1.17"
 sympy = "^1.13"
 tzdata = "^2024.2"
 urllib3 = "^2.3"
+qiskit-aer = "^0.16.0"
 
 [tool.poetry.dev-dependencies]
 flake8 = "*"

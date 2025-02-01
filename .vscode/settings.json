@@ -1,8 +1,0 @@
-{
-    "python.testing.pytestArgs":[
-        "utilities"
-    ],
-    "python.testing.unittestEnabled": false,
-    "python.defaultInterpreterPath": ".venv/bin/python.exe",
-    "python.testing.pytestEnabled": true
-}
