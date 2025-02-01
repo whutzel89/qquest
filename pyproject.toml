@@ -34,7 +34,7 @@ qiskit-aer = "^0.16.0"
 ipykernel = "^6.29.5"
 pylatexenc = "^2.10"
 
-[tool.poetry.dev-dependencies]
+[tool.poetry.group.dev.dependencies]
 flake8 = "*"
 pytest = "*"
 pytest-cov = "*"
