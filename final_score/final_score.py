@@ -1,10 +1,9 @@
-from typing import List
-
 import networkx as nx
 import numpy as np
 from qiskit import transpile
 
-from final_score.variables import ANSATZ, COUNTS, GRAPH, SHOTS
+from final_score.ansatz_ham import build_ansatz, get_counts
+from final_score.variables import GRAPH, LR, SHOTS
 
 
 def get_classical_brute_force_scores(graph):
@@ -77,12 +76,10 @@ def final_score(graph, XS_brut, counts, shots, ansatz):
 
 
 def main():
-    graph = GRAPH
-    XS_brut, XS_balanced, XS_connected = get_classical_brute_force_scores(graph)
-    counts = COUNTS
-    shots = SHOTS
-    ansatz = ANSATZ
+    XS_brut, XS_balanced, XS_connected = get_classical_brute_force_scores(GRAPH)
+    ansatz = build_ansatz(GRAPH)
+    counts = get_counts(SHOTS, ansatz, GRAPH, LR)
 
-    print("Base score: " + str(final_score(graph, XS_brut, counts, shots, ansatz)))
-    print("Balanced score: " + str(final_score(graph, XS_balanced, counts, shots, ansatz)))
-    print("Connected score: " + str(final_score(graph, XS_connected, counts, shots, ansatz)))
+    print("Base score: " + str(final_score(GRAPH, XS_brut, counts, SHOTS, ansatz)))
+    print("Balanced score: " + str(final_score(GRAPH, XS_balanced, counts, SHOTS, ansatz)))
+    print("Connected score: " + str(final_score(GRAPH, XS_connected, counts, SHOTS, ansatz)))
