@@ -20,10 +20,10 @@ def compute_cut_size(graph, bitstring):
     return cut_sz
 
 
-def get_counts(shots, ansatz, graph, lr=0.1):
+def get_counts(shots, ansatz, graph, coef,lr=0.1):
     # Sample your optimized quantum state using Aer
     backend = AerSimulator()
-    ham = build_maxcut_hamiltonian(graph)
+    ham = build_maxcut_hamiltonian(graph,coef)
     qit_evolver = QITEvolver(ham, ansatz)
     qit_evolver.evolve(num_steps=40, lr=lr, verbose=True)
     optimized_state = ansatz.assign_parameters(qit_evolver.param_vals[-1])
