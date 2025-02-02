@@ -1,9 +1,44 @@
 import networkx as nx
 import numpy as np
 from qiskit import transpile
+from qiskit_aer import AerSimulator
 
-from final_score.ansatz_ham import build_ansatz, get_counts
+from final_score.ansatz_ham import build_ansatz, build_maxcut_hamiltonian
+from final_score.qit_evolver import QITEvolver
 from final_score.variables import GRAPH, LR, SHOTS
+
+
+def compute_cut_size(graph, bitstring):
+    """
+    Get the cut size of the partition of ``graph`` described by the given
+    ``bitstring``.
+    """
+    cut_sz = 0
+    for u, v in graph.edges:
+        if bitstring[u] != bitstring[v]:
+            cut_sz += 1
+    return cut_sz
+
+
+def get_counts(shots, ansatz, graph, lr=0.1):
+    # Sample your optimized quantum state using Aer
+    backend = AerSimulator()
+    ham = build_maxcut_hamiltonian(graph)
+    qit_evolver = QITEvolver(ham, ansatz)
+    qit_evolver.evolve(num_steps=40, lr=lr, verbose=True)
+    optimized_state = ansatz.assign_parameters(qit_evolver.param_vals[-1])
+    optimized_state.measure_all()
+    counts = backend.run(optimized_state, shots=shots).result().get_counts()
+
+    # Find the sampled bitstring with the largest cut value
+    cut_vals = sorted(((bs, compute_cut_size(graph, bs)) for bs in counts), key=lambda t: t[1])
+    best_bs = cut_vals[-1][0]
+
+    # Now find the most likely MaxCut solution as sampled from your optimized state
+    # We'll leave this part up to you!!!
+    _most_likely_soln = ""
+
+    return counts
 
 
 def get_classical_brute_force_scores(graph):
