@@ -6,6 +6,7 @@ from final_score.graphs import (
     expander_graph_n,
     random_connected_graph_16,
     regular_graph_4_8,
+    triangle_graph
 )
 
 graph1 = cycle_graph_c8()
@@ -15,7 +16,8 @@ graph4 = regular_graph_4_8()
 graph5 = cubic_graph_3_16()
 graph6 = random_connected_graph_16(p=0.18)
 graph7 = expander_graph_n(16)
+graph8 = triangle_graph()
 
-GRAPH = graph4
+GRAPH = graph8
 SHOTS = 100_000
 LR = 0.1

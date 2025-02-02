@@ -180,3 +180,32 @@ def planar_connected_graph_16():
     pos = {node: (node // 2, node % 2) for node in G.nodes()}
     nx.draw(G, pos, with_labels=False, node_color="lightcoral", edge_color="gray", node_size=100)
     return G
+
+def triangle_graph():
+    G = nx.Graph()
+    # Layout edges
+    G.add_edge(2, 1)
+    G.add_edge(1, 0)
+    G.add_edge(0, 2)
+
+    G.add_edge(0, 3)
+    G.add_edge(3, 2)
+
+    G.add_edge(0, 4)
+    G.add_edge(4, 3)
+
+    G.add_edge(0, 7)
+    G.add_edge(7, 1)
+
+    G.add_edge(0, 6)
+    G.add_edge(6, 7)
+    G.add_edge(6, 4)
+
+    G.add_edge(4, 5)
+    G.add_edge(5, 6)
+
+    pos = nx.spring_layout(G, seed=42)
+    nx.draw(G, pos, with_labels=True, node_color='lightblue', edge_color='gray', node_size=300)
+    # plt.title("Dr. Robotnik's Chaos Emerald")
+    # plt.show()
+    return G

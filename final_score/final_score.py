@@ -118,3 +118,4 @@ def main():
     print("Base score: " + str(final_score(GRAPH, XS_brut, counts, SHOTS, ansatz)))
     print("Balanced score: " + str(final_score(GRAPH, XS_balanced, counts, SHOTS, ansatz)))
     print("Connected score: " + str(final_score(GRAPH, XS_connected, counts, SHOTS, ansatz)))
+
