@@ -38,6 +38,11 @@ pylatexenc = "^2.10"
 flake8 = "*"
 pytest = "*"
 pytest-cov = "*"
+black = "*"
+isort = "*"
+
+[tool.poetry.scripts]
+final_score = 'final_score.final_score:main'
 
 [build-system]
 requires = ["poetry-core"]
